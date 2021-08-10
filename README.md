@@ -1,1 +1,1 @@
-# BounceRippleAnimation
+# Bounce ripple animation
