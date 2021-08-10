@@ -56,21 +56,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         parent: rippleController,
         curve: Curves.ease,
       ),
-    )
-      ..addListener(
-        () {
-          setState(() {});
-        },
-      )
-      ..addStatusListener(
-        (status) {
-          if (status == AnimationStatus.completed) {
-            rippleController.repeat();
-          } else if (status == AnimationStatus.dismissed) {
-            rippleController.forward();
-          }
-        },
-      );
+    )..addListener(() {
+        setState(() {});
+      });
+
 
     centerCircleController = AnimationController(
       vsync: this,
